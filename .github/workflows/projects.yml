@@ -7,7 +7,7 @@ on:
     - cron: '13 1 * * *'
 
 jobs:
-  update-dependencies:
+  fetch-projects:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

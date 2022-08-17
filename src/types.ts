@@ -1,4 +1,5 @@
 export interface Projects {
+  lastUpdated: string;
   totalCount: number;
   totalStars: number;
   totalForks: number;

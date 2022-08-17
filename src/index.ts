@@ -116,6 +116,7 @@ async function run() {
   const totalStars = merged.reduce((acc, curr) => acc + curr.stargazerCount, 0);
   const totalForks = merged.reduce((acc, curr) => acc + curr.forkCount, 0);
   const projects: Projects = {
+    lastUpdated: new Date().toISOString(),
     totalCount: profile.user.repositories.totalCount,
     totalStars,
     totalForks,
