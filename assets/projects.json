@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2022-08-22T01:52:06.317Z",
-  "totalCount": 43,
+  "lastUpdated": "2022-08-23T01:52:44.637Z",
+  "totalCount": 44,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
@@ -106,7 +106,7 @@
     {
       "nameWithOwner": "zotera/zotera",
       "description": "A open-source registry for VSIX extensions",
-      "pushedAt": "2022-08-21T20:38:29Z",
+      "pushedAt": "2022-08-22T11:23:08Z",
       "stargazerCount": 0,
       "forkCount": 0,
       "url": "https://github.com/zotera/zotera",
