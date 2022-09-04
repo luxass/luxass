@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2022-09-04T01:52:58.336Z",
+  "lastUpdated": "2022-09-04T18:29:11.843Z",
   "totalCount": 46,
   "totalStars": 0,
   "totalForks": 0,
@@ -7,7 +7,7 @@
     {
       "nameWithOwner": "luxass/neoman",
       "description": null,
-      "pushedAt": "2022-09-02T08:07:41Z",
+      "pushedAt": "2022-09-04T18:15:35Z",
       "stargazerCount": 0,
       "forkCount": 0,
       "url": "https://github.com/luxass/neoman",
@@ -22,7 +22,55 @@
       "object": {
         "entries": [
           {
-            "name": ".luxass-include",
+            "name": ".luxass",
+            "type": "blob"
+          }
+        ]
+      }
+    },
+    {
+      "nameWithOwner": "luxass/luxass.dev",
+      "description": null,
+      "pushedAt": "2022-09-04T18:15:27Z",
+      "stargazerCount": 0,
+      "forkCount": 0,
+      "url": "https://github.com/luxass/luxass.dev",
+      "languages": {
+        "nodes": [
+          {
+            "color": "#f1e05a",
+            "name": "JavaScript"
+          }
+        ]
+      },
+      "object": {
+        "entries": [
+          {
+            "name": ".luxass",
+            "type": "blob"
+          }
+        ]
+      }
+    },
+    {
+      "nameWithOwner": "luxass/prettier-config",
+      "description": null,
+      "pushedAt": "2022-09-04T18:15:09Z",
+      "stargazerCount": 0,
+      "forkCount": 0,
+      "url": "https://github.com/luxass/prettier-config",
+      "languages": {
+        "nodes": [
+          {
+            "color": "#f1e05a",
+            "name": "JavaScript"
+          }
+        ]
+      },
+      "object": {
+        "entries": [
+          {
+            "name": ".luxass",
             "type": "blob"
           }
         ]
@@ -31,7 +79,7 @@
     {
       "nameWithOwner": "luxass/eslint-config",
       "description": "My shareable ESLint config",
-      "pushedAt": "2022-08-18T07:06:43Z",
+      "pushedAt": "2022-09-04T18:14:53Z",
       "stargazerCount": 0,
       "forkCount": 0,
       "url": "https://github.com/luxass/eslint-config",
@@ -46,58 +94,24 @@
       "object": {
         "entries": [
           {
-            "name": ".luxass-include",
+            "name": ".luxass",
             "type": "blob"
           }
         ]
       }
     },
     {
-      "nameWithOwner": "luxass/theme-studio",
-      "description": null,
-      "pushedAt": "2022-04-03T20:54:41Z",
+      "nameWithOwner": "zotera/zotera",
+      "description": "A open-source registry for VSIX extensions",
+      "pushedAt": "2022-09-04T16:45:24Z",
       "stargazerCount": 0,
       "forkCount": 0,
-      "url": "https://github.com/luxass/theme-studio",
+      "url": "https://github.com/zotera/zotera",
       "languages": {
         "nodes": [
           {
-            "color": "#3178c6",
-            "name": "TypeScript"
-          }
-        ]
-      },
-      "object": null
-    },
-    {
-      "nameWithOwner": "luxass/action-trending",
-      "description": null,
-      "pushedAt": "2022-07-02T11:58:10Z",
-      "stargazerCount": 0,
-      "forkCount": 0,
-      "url": "https://github.com/luxass/action-trending",
-      "languages": {
-        "nodes": [
-          {
-            "color": "#3178c6",
-            "name": "TypeScript"
-          }
-        ]
-      },
-      "object": null
-    },
-    {
-      "nameWithOwner": "luxass/luxals",
-      "description": ":star: A collection of JavaScript & TypeScript utilities.",
-      "pushedAt": "2022-07-07T14:56:36Z",
-      "stargazerCount": 0,
-      "forkCount": 0,
-      "url": "https://github.com/luxass/luxals",
-      "languages": {
-        "nodes": [
-          {
-            "color": "#3178c6",
-            "name": "TypeScript"
+            "color": "#f1e05a",
+            "name": "JavaScript"
           }
         ]
       },
@@ -111,17 +125,17 @@
       }
     },
     {
-      "nameWithOwner": "zotera/zotera",
-      "description": "A open-source registry for VSIX extensions",
-      "pushedAt": "2022-09-02T13:27:00Z",
+      "nameWithOwner": "luxass/luxals",
+      "description": ":star: A collection of JavaScript & TypeScript utilities.",
+      "pushedAt": "2022-07-07T14:56:36Z",
       "stargazerCount": 0,
       "forkCount": 0,
-      "url": "https://github.com/zotera/zotera",
+      "url": "https://github.com/luxass/luxals",
       "languages": {
         "nodes": [
           {
-            "color": "#3178c6",
-            "name": "TypeScript"
+            "color": "#89e051",
+            "name": "Shell"
           }
         ]
       },

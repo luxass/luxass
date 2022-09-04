@@ -23,7 +23,7 @@ async function getProfile(username: string): Promise<Profile> {
                   stargazerCount
                   forkCount
                   url
-                  languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
+                  languages(first: 1, orderBy: { field: SIZE, direction: ASC }) {
                     nodes {
                       color
                       name
@@ -41,11 +41,7 @@ async function getProfile(username: string): Promise<Profile> {
               }
             }
           }
-          repositories(
-            first: 100
-            orderBy: { direction: DESC, field: STARGAZERS }
-            privacy: PUBLIC
-          ) {
+          repositories(first: 100, orderBy: { direction: ASC, field: PUSHED_AT }, privacy: PUBLIC) {
             totalCount
             nodes {
               nameWithOwner
@@ -54,7 +50,7 @@ async function getProfile(username: string): Promise<Profile> {
               stargazerCount
               forkCount
               url
-              languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
+              languages(first: 1, orderBy: { field: SIZE, direction: ASC }) {
                 nodes {
                   color
                   name
@@ -77,7 +73,6 @@ async function getProfile(username: string): Promise<Profile> {
       headers: {
         authorization: `bearer ${process.env.GITHUB_TOKEN}`
       },
-      owner: username,
       name: username
     }
   );
@@ -107,11 +102,13 @@ async function writeProjectFile(projects: Projects) {
 async function run() {
   const profile = await getProfile('luxass');
   const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map((edge) => edge.node);
-  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) => node.object?.entries.find((entry) => entry.name === '.luxass'));
+  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) =>
+    node.object?.entries.find((entry) => entry.name === '.luxass')
+  )
 
   const merged = deepmerge(pinnedItemsEdgeNodes, repositoriesEdgeNodes, {
     arrayMerge: combineMerge
-  });
+  }).sort((a, b) => new Date(b.pushedAt).getTime() - new Date(a.pushedAt).getTime());
 
   const totalStars = merged.reduce((acc, curr) => acc + curr.stargazerCount, 0);
   const totalForks = merged.reduce((acc, curr) => acc + curr.forkCount, 0);
