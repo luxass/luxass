@@ -107,7 +107,7 @@ async function writeProjectFile(projects: Projects) {
 async function run() {
   const profile = await getProfile('luxass');
   const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map((edge) => edge.node);
-  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) => node.object?.entries.find((entry) => entry.name === '.luxass-include'));
+  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) => node.object?.entries.find((entry) => entry.name === '.luxass'));
 
   const merged = deepmerge(pinnedItemsEdgeNodes, repositoriesEdgeNodes, {
     arrayMerge: combineMerge
