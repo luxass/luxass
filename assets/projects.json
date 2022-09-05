@@ -1,21 +1,21 @@
 {
-  "lastUpdated": "2022-09-04T18:35:00.753Z",
+  "lastUpdated": "2022-09-05T01:52:44.123Z",
   "totalCount": 46,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
     {
-      "nameWithOwner": "luxass/neoman",
+      "nameWithOwner": "luxass/luxass.dev",
       "description": null,
-      "pushedAt": "2022-09-04T18:15:35Z",
+      "pushedAt": "2022-09-04T19:51:01Z",
       "stargazerCount": 0,
       "forkCount": 0,
-      "url": "https://github.com/luxass/neoman",
+      "url": "https://github.com/luxass/luxass.dev",
       "languages": {
         "nodes": [
           {
-            "color": "#3178c6",
-            "name": "TypeScript"
+            "color": "#f1e05a",
+            "name": "JavaScript"
           }
         ]
       },
@@ -29,17 +29,17 @@
       }
     },
     {
-      "nameWithOwner": "luxass/luxass.dev",
+      "nameWithOwner": "luxass/neoman",
       "description": null,
-      "pushedAt": "2022-09-04T18:15:27Z",
+      "pushedAt": "2022-09-04T18:15:35Z",
       "stargazerCount": 0,
       "forkCount": 0,
-      "url": "https://github.com/luxass/luxass.dev",
+      "url": "https://github.com/luxass/neoman",
       "languages": {
         "nodes": [
           {
-            "color": "#f1e05a",
-            "name": "JavaScript"
+            "color": "#3178c6",
+            "name": "TypeScript"
           }
         ]
       },
