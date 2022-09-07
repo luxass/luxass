@@ -3,7 +3,15 @@ export interface Projects {
   totalCount: number;
   totalStars: number;
   totalForks: number;
-  projects: EdgeNode[];
+  projects: {
+    name: string;
+    description: string;
+    url: string;
+    pushedAt: string;
+    stars: number;
+    forks: number;
+    primaryLanguage: LanguageNode;
+  }[];
 }
 
 export interface Profile {
@@ -26,7 +34,7 @@ export interface Edge {
 export interface EdgeNode {
   nameWithOwner: string;
   description: null | string;
-  pushedAt: Date;
+  pushedAt: string;
   stargazerCount: number;
   forkCount: number;
   url: string;
@@ -35,10 +43,10 @@ export interface EdgeNode {
 }
 
 export interface Languages {
-  nodes: LanguagesNode[];
+  nodes: LanguageNode[];
 }
 
-export interface LanguagesNode {
+export interface LanguageNode {
   color: string;
   name: string;
 }

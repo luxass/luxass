@@ -104,7 +104,7 @@ async function run() {
   const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map((edge) => edge.node);
   const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) =>
     node.object?.entries.find((entry) => entry.name === '.luxass')
-  )
+  );
 
   const merged = deepmerge(pinnedItemsEdgeNodes, repositoriesEdgeNodes, {
     arrayMerge: combineMerge
@@ -117,7 +117,17 @@ async function run() {
     totalCount: profile.user.repositories.totalCount,
     totalStars,
     totalForks,
-    projects: merged
+    projects: merged.map((project) => {
+      return {
+        name: project.nameWithOwner,
+        description: project.description,
+        url: project.url,
+        pushedAt: project.pushedAt,
+        stars: project.stargazerCount,
+        forks: project.forkCount,
+        primaryLanguage: project.languages.nodes[0]
+      };
+    })
   };
 
   await writeProjectFile(projects);
