@@ -23,7 +23,7 @@ async function getProfile(username: string): Promise<Profile> {
                   stargazerCount
                   forkCount
                   url
-                  languages(first: 1, orderBy: { field: SIZE, direction: ASC }) {
+                  languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
                     nodes {
                       color
                       name
@@ -50,7 +50,7 @@ async function getProfile(username: string): Promise<Profile> {
               stargazerCount
               forkCount
               url
-              languages(first: 1, orderBy: { field: SIZE, direction: ASC }) {
+              languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
                 nodes {
                   color
                   name
