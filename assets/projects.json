@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2022-09-07T08:31:35.291Z",
+  "lastUpdated": "2022-09-07T08:36:01.778Z",
   "totalCount": 46,
   "totalStars": 0,
   "totalForks": 0,
@@ -14,8 +14,8 @@
       "languages": {
         "nodes": [
           {
-            "color": "#563d7c",
-            "name": "CSS"
+            "color": "#3178c6",
+            "name": "TypeScript"
           }
         ]
       },
@@ -38,8 +38,8 @@
       "languages": {
         "nodes": [
           {
-            "color": "#f1e05a",
-            "name": "JavaScript"
+            "color": "#3178c6",
+            "name": "TypeScript"
           }
         ]
       },
@@ -134,8 +134,8 @@
       "languages": {
         "nodes": [
           {
-            "color": "#89e051",
-            "name": "Shell"
+            "color": "#3178c6",
+            "name": "TypeScript"
           }
         ]
       },
