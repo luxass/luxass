@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2022-09-08T01:53:25.236Z",
+  "lastUpdated": "2022-09-09T01:53:12.931Z",
   "totalCount": 46,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
     {
-      "name": "luxass/luxass.dev",
-      "description": null,
-      "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2022-09-07T14:37:42Z",
+      "name": "zotera/zotera",
+      "description": "A open-source registry for VSIX extensions",
+      "url": "https://github.com/zotera/zotera",
+      "pushedAt": "2022-09-08T11:44:30Z",
       "stars": 0,
       "forks": 0,
       "primaryLanguage": {
@@ -17,10 +17,10 @@
       }
     },
     {
-      "name": "zotera/zotera",
-      "description": "A open-source registry for VSIX extensions",
-      "url": "https://github.com/zotera/zotera",
-      "pushedAt": "2022-09-05T11:54:56Z",
+      "name": "luxass/luxass.dev",
+      "description": null,
+      "url": "https://github.com/luxass/luxass.dev",
+      "pushedAt": "2022-09-07T14:37:42Z",
       "stars": 0,
       "forks": 0,
       "primaryLanguage": {
