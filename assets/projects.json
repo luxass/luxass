@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2022-10-08T01:51:53.212Z",
+  "lastUpdated": "2022-10-09T01:53:01.315Z",
   "totalCount": 46,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/luxass.dev",
+      "description": null,
+      "url": "https://github.com/luxass/luxass.dev",
+      "pushedAt": "2022-10-08T21:01:25Z",
+      "stars": 0,
+      "forks": 0,
+      "primaryLanguage": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "luxass/luxals",
       "description": ":star: A collection of JavaScript & TypeScript utilities.",
@@ -21,18 +33,6 @@
       "description": "A open-source registry for VSIX extensions",
       "url": "https://github.com/zotera/zotera",
       "pushedAt": "2022-09-21T09:54:58Z",
-      "stars": 0,
-      "forks": 0,
-      "primaryLanguage": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/luxass.dev",
-      "description": null,
-      "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2022-09-09T11:52:28Z",
       "stars": 0,
       "forks": 0,
       "primaryLanguage": {
