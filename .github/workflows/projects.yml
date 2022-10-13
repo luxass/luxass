@@ -7,18 +7,34 @@ on:
     - cron: '13 1 * * *'
 
 jobs:
+  # fetch-projects:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
+  #     - uses: pnpm/action-setup@v2.2.2
+  #     - name: Install
+  #       run: pnpm install
+  #     - name: Fetch Projects
+  #       run: pnpm tsx src/index.ts
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Add files
+  #       run: |
+  #         git config user.name github-actions[bot]
+  #         git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+  #         git add assets/projects.json
+  #         git commit -m "chore: updated projects"
+  #         git push
   fetch-projects:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - uses: pnpm/action-setup@v2.2.2
-      - name: Install
-        run: pnpm install
-      - name: Fetch Projects
-        run: pnpm tsx src/index.ts
+      - name: Setup Bun Runtime
+        uses: antongolub/action-setup-bun@v1
+      - name: Run Script
+        run: bun run src/index.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Add files

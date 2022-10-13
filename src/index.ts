@@ -1,82 +1,84 @@
 /* eslint-disable no-console */
 import deepmerge from 'deepmerge';
-import 'dotenv/config';
 // eslint-disable-next-line import/order
-import { promises as fs } from 'node:fs';
+import fs from 'node:fs/promises';
 
 import { graphql } from '@octokit/graphql';
 
 import type { Profile, Projects } from './types';
 
-async function getProfile(username: string): Promise<Profile> {
-  const profile = await graphql<Profile>(
-    `
-      query Profile($name: String!) {
-        user(login: $name) {
-          pinnedItems(first: 6) {
-            edges {
-              node {
-                ... on Repository {
-                  nameWithOwner
-                  description
-                  pushedAt
-                  stargazerCount
-                  forkCount
-                  url
-                  languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
-                    nodes {
-                      color
-                      name
-                    }
-                  }
-                  object(expression: "HEAD:.github") {
-                    ... on Tree {
-                      entries {
-                        name
-                        type
-                      }
-                    }
-                  }
-                }
+const query = `query Profile($name: String!) {
+  user(login: $name) {
+    pinnedItems(first: 6) {
+      edges {
+        node {
+          ... on Repository {
+            nameWithOwner
+            description
+            pushedAt
+            stargazerCount
+            forkCount
+            url
+            languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
+              nodes {
+                color
+                name
               }
             }
-          }
-          repositories(first: 100, orderBy: { direction: ASC, field: PUSHED_AT }, privacy: PUBLIC) {
-            totalCount
-            nodes {
-              nameWithOwner
-              description
-              pushedAt
-              stargazerCount
-              forkCount
-              url
-              languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
-                nodes {
-                  color
+            object(expression: "HEAD:.github") {
+              ... on Tree {
+                entries {
                   name
-                }
-              }
-              object(expression: "HEAD:.github") {
-                ... on Tree {
-                  entries {
-                    name
-                    type
-                  }
+                  type
                 }
               }
             }
           }
         }
       }
-    `,
-    {
-      headers: {
-        authorization: `bearer ${process.env.GITHUB_TOKEN}`
-      },
-      name: username
     }
-  );
-  return profile;
+    repositories(first: 100, orderBy: { direction: ASC, field: PUSHED_AT }, privacy: PUBLIC) {
+      totalCount
+      nodes {
+        nameWithOwner
+        description
+        pushedAt
+        stargazerCount
+        forkCount
+        url
+        languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
+          nodes {
+            color
+            name
+          }
+        }
+        object(expression: "HEAD:.github") {
+          ... on Tree {
+            entries {
+              name
+              type
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
+async function getProfile(username: string): Promise<{ data: Profile }> {
+  const profile = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    body: JSON.stringify({
+      query,
+      variables: { name: username }
+    }),
+    headers: {
+      authorization: `bearer ${process.env.GITHUB_TOKEN}`
+    }
+  });
+
+  return profile.json();
 }
 
 function combineMerge(target: any[], source: any[], options: any) {
@@ -100,7 +102,8 @@ async function writeProjectFile(projects: Projects) {
 }
 
 async function run() {
-  const profile = await getProfile('luxass');
+  const { data: profile } = await getProfile('luxass');
+
   const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map((edge) => edge.node);
   const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) =>
     node.object?.entries.find((entry) => entry.name === '.luxass')

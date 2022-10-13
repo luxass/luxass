@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "incremental": true,
+    "types": ["bun-types"]
   },
   "include": ["src"],
   "exclude": ["node_modules"]
