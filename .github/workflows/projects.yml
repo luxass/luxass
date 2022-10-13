@@ -31,10 +31,11 @@ jobs:
   fetch-projects:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Setup Bun Runtime
         uses: antongolub/action-setup-bun@v1
       - name: Run Script
-        run: bun run src/index.ts
+        run: bun run ./src/index.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Add files
