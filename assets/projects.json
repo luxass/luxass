@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2022-10-13T19:23:51.539Z",
+  "lastUpdated": "2022-10-13T19:29:58.085Z",
   "totalCount": 46,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
     {
       "name": "luxass/luxass.dev",
-      "description": null,
+      "description": "No description was set",
       "url": "https://github.com/luxass/luxass.dev",
       "pushedAt": "2022-10-08T21:01:25Z",
       "stars": 0,
@@ -42,7 +42,7 @@
     },
     {
       "name": "luxass/neoman",
-      "description": null,
+      "description": "No description was set",
       "url": "https://github.com/luxass/neoman",
       "pushedAt": "2022-09-04T18:15:35Z",
       "stars": 0,
@@ -54,7 +54,7 @@
     },
     {
       "name": "luxass/prettier-config",
-      "description": null,
+      "description": "No description was set",
       "url": "https://github.com/luxass/prettier-config",
       "pushedAt": "2022-09-04T18:15:09Z",
       "stars": 0,
