@@ -3,9 +3,76 @@ import deepmerge from 'deepmerge';
 // eslint-disable-next-line import/order
 import fs from 'node:fs/promises';
 
-import { graphql } from '@octokit/graphql';
+export interface Projects {
+  lastUpdated: string;
+  totalCount: number;
+  totalStars: number;
+  totalForks: number;
+  projects: {
+    name: string;
+    description: string;
+    url: string;
+    pushedAt: string;
+    stars: number;
+    forks: number;
+    primaryLanguage: LanguageNode;
+  }[];
+}
 
-import type { Profile, Projects } from './types';
+export interface Profile {
+  user: User;
+}
+
+export interface User {
+  pinnedItems: PinnedItems;
+  repositories: Repositories;
+}
+
+export interface PinnedItems {
+  edges: Edge[];
+}
+
+export interface Edge {
+  node: EdgeNode;
+}
+
+export interface EdgeNode {
+  nameWithOwner: string;
+  description: string | null;
+  pushedAt: string;
+  stargazerCount: number;
+  forkCount: number;
+  url: string;
+  languages: Languages;
+  object: Object | null;
+}
+
+export interface Languages {
+  nodes: LanguageNode[];
+}
+
+export interface LanguageNode {
+  color: string;
+  name: string;
+}
+
+export interface Object {
+  entries: Entry[];
+}
+
+export interface Entry {
+  name: string;
+  type: EntryType;
+}
+
+export type EntryType = 'blob' | 'tree';
+
+export interface Repositories {
+  totalCount: number;
+  nodes: EdgeNode[];
+}
+
+
 
 const query = `query Profile($name: String!) {
   user(login: $name) {
@@ -123,7 +190,7 @@ async function run() {
     projects: merged.map((project) => {
       return {
         name: project.nameWithOwner,
-        description: project.description,
+        description: project.description ?? 'No description was set',
         url: project.url,
         pushedAt: project.pushedAt,
         stars: project.stargazerCount,
