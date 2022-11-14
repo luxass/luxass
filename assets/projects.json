@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2022-11-13T01:51:32.286Z",
+  "lastUpdated": "2022-11-14T01:53:21.578Z",
   "totalCount": 48,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "zotera/zotera",
+      "description": "A open-source registry for VSIX extensions",
+      "url": "https://github.com/zotera/zotera",
+      "pushedAt": "2022-11-13T12:41:32Z",
+      "stars": 0,
+      "forks": 0,
+      "primaryLanguage": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "luxass/eslint-config",
       "description": "My shareable ESLint config",
@@ -33,18 +45,6 @@
       "description": ":star: A collection of JavaScript & TypeScript utilities.",
       "url": "https://github.com/luxass/luxals",
       "pushedAt": "2022-09-22T20:08:06Z",
-      "stars": 0,
-      "forks": 0,
-      "primaryLanguage": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "zotera/zotera",
-      "description": "A open-source registry for VSIX extensions",
-      "url": "https://github.com/zotera/zotera",
-      "pushedAt": "2022-09-21T09:54:58Z",
       "stars": 0,
       "forks": 0,
       "primaryLanguage": {
