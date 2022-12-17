@@ -1,78 +1,74 @@
-/* eslint-disable no-console */
-import deepmerge from 'deepmerge';
-// eslint-disable-next-line import/order
-import fs from 'node:fs/promises';
+import fs from "node:fs/promises";
+import deepmerge from "deepmerge";
 
 export interface Projects {
-  lastUpdated: string;
-  totalCount: number;
-  totalStars: number;
-  totalForks: number;
+  lastUpdated: string
+  totalCount: number
+  totalStars: number
+  totalForks: number
   projects: {
-    name: string;
-    description: string;
-    url: string;
-    pushedAt: string;
-    stars: number;
-    forks: number;
-    primaryLanguage: LanguageNode;
-  }[];
+    name: string
+    description: string
+    url: string
+    pushedAt: string
+    stars: number
+    forks: number
+    primaryLanguage: LanguageNode
+  }[]
 }
 
 export interface Profile {
-  user: User;
+  user: User
 }
 
 export interface User {
-  pinnedItems: PinnedItems;
-  repositories: Repositories;
+  pinnedItems: PinnedItems
+  repositories: Repositories
 }
 
 export interface PinnedItems {
-  edges: Edge[];
+  edges: Edge[]
 }
 
 export interface Edge {
-  node: EdgeNode;
+  node: EdgeNode
 }
 
 export interface EdgeNode {
-  nameWithOwner: string;
-  description: string | null;
-  pushedAt: string;
-  stargazerCount: number;
-  forkCount: number;
-  url: string;
-  languages: Languages;
-  object: Object | null;
+  nameWithOwner: string
+  description: string | null
+  pushedAt: string
+  stargazerCount: number
+  forkCount: number
+  url: string
+  languages: Languages
+  object: Object | null
 }
 
 export interface Languages {
-  nodes: LanguageNode[];
+  nodes: LanguageNode[]
 }
 
 export interface LanguageNode {
-  color: string;
-  name: string;
+  color: string
+  name: string
 }
 
 export interface Object {
-  entries: Entry[];
+  entries: Entry[]
 }
 
 export interface Entry {
-  name: string;
-  type: EntryType;
+  name: string
+  type: EntryType
 }
 
-export type EntryType = 'blob' | 'tree';
+export type EntryType = "blob" | "tree";
 
 export interface Repositories {
-  totalCount: number;
-  nodes: EdgeNode[];
+  totalCount: number
+  nodes: EdgeNode[]
 }
-
-
 
 const query = `query Profile($name: String!) {
   user(login: $name) {
@@ -134,8 +130,8 @@ const query = `query Profile($name: String!) {
 `;
 
 async function getProfile(username: string): Promise<{ data: Profile }> {
-  const profile = await fetch('https://api.github.com/graphql', {
-    method: 'POST',
+  const profile = await fetch("https://api.github.com/graphql", {
+    method: "POST",
     body: JSON.stringify({
       query,
       variables: { name: username }
@@ -152,28 +148,34 @@ function combineMerge(target: any[], source: any[], options: any) {
   const destination = target.slice();
 
   source.forEach((item, index) => {
-    if (typeof destination[index] === 'undefined') {
+    if (typeof destination[index] === "undefined")
       destination[index] = options.cloneUnlessOtherwiseSpecified(item, options);
-    } else if (options.isMergeableObject(item)) {
+
+    else if (options.isMergeableObject(item))
       destination[index] = deepmerge(target[index], item, options);
-    } else if (target.includes(item)) {
+
+    else if (target.includes(item))
       destination.push(item);
-    }
   });
   return destination;
 }
 
 async function writeProjectFile(projects: Projects) {
-  console.log('writing project file');
-  await fs.writeFile('./assets/projects.json', JSON.stringify(projects, null, 2));
+  console.log("writing project file");
+  await fs.writeFile("./assets/projects.json", JSON.stringify(projects, null, 2));
 }
 
-async function run() {
-  const { data: profile } = await getProfile('luxass');
+const includeNames = [".luxass", ".luxassinclude", ".luxass_include", ".luxass-visdig", ".luxass-include", ".luxass-komfritfrem"];
 
-  const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map((edge) => edge.node);
-  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) =>
-    node.object?.entries.find((entry) => entry.name === '.luxass')
+async function run() {
+  const { data: profile } = await getProfile("luxass");
+
+  if (!profile)
+    throw new TypeError("An error occurred.");
+
+  const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map(edge => edge.node);
+  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter(node =>
+    node.object?.entries.find(entry => includeNames.includes(entry.name))
   );
 
   const merged = deepmerge(pinnedItemsEdgeNodes, repositoriesEdgeNodes, {
@@ -190,7 +192,7 @@ async function run() {
     projects: merged.map((project) => {
       return {
         name: project.nameWithOwner,
-        description: project.description ?? 'No description was set',
+        description: project.description ?? "No description was set",
         url: project.url,
         pushedAt: project.pushedAt,
         stars: project.stargazerCount,

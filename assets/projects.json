@@ -1,9 +1,33 @@
 {
-  "lastUpdated": "2022-12-17T01:44:38.715Z",
-  "totalCount": 52,
+  "lastUpdated": "2022-12-17T20:36:33.593Z",
+  "totalCount": 53,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/jsonc-parse",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/jsonc-parse",
+      "pushedAt": "2022-12-17T20:36:19Z",
+      "stars": 0,
+      "forks": 0,
+      "primaryLanguage": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
+    {
+      "name": "luxass/eslint-config",
+      "description": "My shareable ESLint config",
+      "url": "https://github.com/luxass/eslint-config",
+      "pushedAt": "2022-12-17T13:25:59Z",
+      "stars": 0,
+      "forks": 0,
+      "primaryLanguage": {
+        "color": "#f1e05a",
+        "name": "JavaScript"
+      }
+    },
     {
       "name": "luxass/luxass.dev",
       "description": "No description was set",
@@ -17,34 +41,10 @@
       }
     },
     {
-      "name": "luxass/eslint-config",
-      "description": "My shareable ESLint config",
-      "url": "https://github.com/luxass/eslint-config",
-      "pushedAt": "2022-12-12T11:12:47Z",
-      "stars": 0,
-      "forks": 0,
-      "primaryLanguage": {
-        "color": "#f1e05a",
-        "name": "JavaScript"
-      }
-    },
-    {
       "name": "zotera/zotera",
       "description": "A open-source registry for VSIX extensions",
       "url": "https://github.com/zotera/zotera",
       "pushedAt": "2022-11-13T12:41:32Z",
-      "stars": 0,
-      "forks": 0,
-      "primaryLanguage": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/luxals",
-      "description": ":star: A collection of JavaScript & TypeScript utilities.",
-      "url": "https://github.com/luxass/luxals",
-      "pushedAt": "2022-09-22T20:08:06Z",
       "stars": 0,
       "forks": 0,
       "primaryLanguage": {

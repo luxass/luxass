@@ -10,19 +10,22 @@ jobs:
   fetch-projects:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Setup Bun Runtime
         uses: antongolub/action-setup-bun@v1
+
       - name: Bun Install
         run: bun install
       - name: Run Script
-        run: bun run ./fetch-projects.ts
+        run: bun run ./scripts/fetch-projects.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Add files
         run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config user.name luxass
+          git config user.email lucasnrgaard@gmail.com
           git add assets/projects.json
           git commit -m "chore: updated projects"
           git push
