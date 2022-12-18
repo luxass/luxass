@@ -2,6 +2,11 @@ name: Fetch Projects
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/fetch-projects.ts
   schedule:
     # Every night at 1:13
     - cron: '13 1 * * *'
