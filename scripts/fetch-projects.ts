@@ -175,9 +175,9 @@ async function run() {
   const all = repositoriesEdgeNodes.concat(pinnedItemsEdgeNodes).reduce<EdgeNode[]>((prev, curr) => {
     if (!prev.find(node => node.nameWithOwner === curr.nameWithOwner))
       prev.push(curr);
+
     return prev;
   }, []).sort((a, b) => new Date(b.pushedAt).getTime() - new Date(a.pushedAt).getTime());
-  console.log(all.length);
 
   const totalStars = all.reduce((acc, curr) => acc + curr.stargazerCount, 0);
   const totalForks = all.reduce((acc, curr) => acc + curr.forkCount, 0);
