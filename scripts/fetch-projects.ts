@@ -1,5 +1,7 @@
 import fs from "node:fs/promises";
-import deepmerge from "deepmerge";
+
+// @ts-expect-error This doesn't have types......
+import toEmoji from "emoji-name-map";
 
 export interface Projects {
   lastUpdated: string
@@ -13,7 +15,7 @@ export interface Projects {
     pushedAt: string
     stars: number
     forks: number
-    primaryLanguage: LanguageNode
+    language: LanguageNode
   }[]
 }
 
@@ -68,6 +70,12 @@ export type EntryType = "blob" | "tree";
 export interface Repositories {
   totalCount: number
   nodes: EdgeNode[]
+}
+
+function parseEmojis(desc: string): string {
+  return desc.replace(/:\w+:/gm, (match) => {
+    return toEmoji.get(match) || match;
+  });
 }
 
 const query = `query Profile($name: String!) {
@@ -144,22 +152,6 @@ async function getProfile(username: string): Promise<{ data: Profile }> {
   return profile.json();
 }
 
-function combineMerge(target: any[], source: any[], options: any) {
-  const destination = target.slice();
-
-  source.forEach((item, index) => {
-    if (typeof destination[index] === "undefined")
-      destination[index] = options.cloneUnlessOtherwiseSpecified(item, options);
-
-    else if (options.isMergeableObject(item))
-      destination[index] = deepmerge(target[index], item, options);
-
-    else if (target.includes(item))
-      destination.push(item);
-  });
-  return destination;
-}
-
 async function writeProjectFile(projects: Projects) {
   console.log("writing project file");
   await fs.writeFile("./assets/projects.json", JSON.stringify(projects, null, 2));
@@ -174,30 +166,35 @@ async function run() {
     throw new TypeError("An error occurred.");
 
   const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map(edge => edge.node);
+  console.log(pinnedItemsEdgeNodes);
+
   const repositoriesEdgeNodes = profile.user.repositories.nodes.filter(node =>
     node.object?.entries.find(entry => includeNames.includes(entry.name))
   );
 
-  const merged = deepmerge(pinnedItemsEdgeNodes, repositoriesEdgeNodes, {
-    arrayMerge: combineMerge
-  }).sort((a, b) => new Date(b.pushedAt).getTime() - new Date(a.pushedAt).getTime());
+  const all = repositoriesEdgeNodes.concat(pinnedItemsEdgeNodes).reduce<EdgeNode[]>((prev, curr) => {
+    if (!prev.find(node => node.nameWithOwner === curr.nameWithOwner))
+      prev.push(curr);
+    return prev;
+  }, []).sort((a, b) => new Date(b.pushedAt).getTime() - new Date(a.pushedAt).getTime());
+  console.log(all.length);
 
-  const totalStars = merged.reduce((acc, curr) => acc + curr.stargazerCount, 0);
-  const totalForks = merged.reduce((acc, curr) => acc + curr.forkCount, 0);
+  const totalStars = all.reduce((acc, curr) => acc + curr.stargazerCount, 0);
+  const totalForks = all.reduce((acc, curr) => acc + curr.forkCount, 0);
   const projects: Projects = {
     lastUpdated: new Date().toISOString(),
     totalCount: profile.user.repositories.totalCount,
     totalStars,
     totalForks,
-    projects: merged.map((project) => {
+    projects: all.map((project) => {
       return {
         name: project.nameWithOwner,
-        description: project.description ?? "No description was set",
+        description: parseEmojis(project.description || "No description was set"),
         url: project.url,
         pushedAt: project.pushedAt,
         stars: project.stargazerCount,
         forks: project.forkCount,
-        primaryLanguage: project.languages.nodes[0]
+        language: project.languages.nodes[0]
       };
     })
   };

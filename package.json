@@ -10,7 +10,8 @@
   "repository": "https://github.com/luxass/luxass",
   "keywords": [],
   "dependencies": {
-    "deepmerge": "^4.2.2"
+    "deepmerge": "^4.2.2",
+    "emoji-name-map": "^1.2.9"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^2.2.1",
