@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2022-12-20T01:48:08.539Z",
+  "lastUpdated": "2022-12-21T01:44:59.260Z",
   "totalCount": 54,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/jsonc-parse",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/jsonc-parse",
+      "pushedAt": "2022-12-20T21:28:12Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "luxass/luxass.dev",
       "description": "No description was set",
@@ -33,18 +45,6 @@
       "description": "No description was set",
       "url": "https://github.com/luxass/action-trending",
       "pushedAt": "2022-12-18T19:26:35Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/jsonc-parse",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/jsonc-parse",
-      "pushedAt": "2022-12-18T14:39:12Z",
       "stars": 0,
       "forks": 0,
       "language": {
