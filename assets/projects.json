@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2022-12-24T01:42:36.201Z",
+  "lastUpdated": "2022-12-25T01:48:11.022Z",
   "totalCount": 54,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "zotera/zotera",
+      "description": "A open-source registry for VSIX extensions",
+      "url": "https://github.com/zotera/zotera",
+      "pushedAt": "2022-12-24T14:41:40Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "luxass/jsonc-parse",
       "description": "No description was set",
@@ -45,18 +57,6 @@
       "description": "No description was set",
       "url": "https://github.com/luxass/action-trending",
       "pushedAt": "2022-12-18T19:26:35Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "zotera/zotera",
-      "description": "A open-source registry for VSIX extensions",
-      "url": "https://github.com/zotera/zotera",
-      "pushedAt": "2022-11-13T12:41:32Z",
       "stars": 0,
       "forks": 0,
       "language": {
