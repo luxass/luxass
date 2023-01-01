@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2022-12-31T01:45:44.827Z",
+  "lastUpdated": "2023-01-01T01:51:17.156Z",
   "totalCount": 54,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/load-config",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/load-config",
+      "pushedAt": "2022-12-31T14:54:35Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "zotera/zotera",
       "description": "A open-source registry for VSIX extensions",
