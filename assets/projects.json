@@ -1,9 +1,33 @@
 {
-  "lastUpdated": "2023-01-04T01:47:22.089Z",
+  "lastUpdated": "2023-01-05T01:48:41.964Z",
   "totalCount": 54,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/eslint-config",
+      "description": "My shareable ESLint config",
+      "url": "https://github.com/luxass/eslint-config",
+      "pushedAt": "2023-01-04T19:52:55Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#f1e05a",
+        "name": "JavaScript"
+      }
+    },
+    {
+      "name": "luxass/prettier-config",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/prettier-config",
+      "pushedAt": "2023-01-04T19:03:37Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#f1e05a",
+        "name": "JavaScript"
+      }
+    },
     {
       "name": "luxass/tsconf-utils",
       "description": "No description was set",
@@ -65,18 +89,6 @@
       }
     },
     {
-      "name": "luxass/eslint-config",
-      "description": "My shareable ESLint config",
-      "url": "https://github.com/luxass/eslint-config",
-      "pushedAt": "2022-12-18T19:35:38Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#f1e05a",
-        "name": "JavaScript"
-      }
-    },
-    {
       "name": "luxass/action-trending",
       "description": "No description was set",
       "url": "https://github.com/luxass/action-trending",
@@ -110,18 +122,6 @@
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/prettier-config",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/prettier-config",
-      "pushedAt": "2022-09-04T18:15:09Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#f1e05a",
-        "name": "JavaScript"
       }
     },
     {
