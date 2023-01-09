@@ -1,31 +1,43 @@
 {
-  "lastUpdated": "2023-01-08T01:50:06.125Z",
+  "lastUpdated": "2023-01-09T01:47:32.583Z",
   "totalCount": 55,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
     {
-      "name": "luxass/prettier-config",
+      "name": "luxass/load-config",
       "description": "No description was set",
-      "url": "https://github.com/luxass/prettier-config",
-      "pushedAt": "2023-01-07T17:11:23Z",
+      "url": "https://github.com/luxass/load-config",
+      "pushedAt": "2023-01-08T22:35:55Z",
       "stars": 0,
       "forks": 0,
       "language": {
-        "color": "#f1e05a",
-        "name": "JavaScript"
+        "color": "#3178c6",
+        "name": "TypeScript"
       }
     },
     {
       "name": "luxass/tsconf-utils",
       "description": "No description was set",
       "url": "https://github.com/luxass/tsconf-utils",
-      "pushedAt": "2023-01-07T16:16:52Z",
+      "pushedAt": "2023-01-08T19:22:40Z",
       "stars": 0,
       "forks": 0,
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
+      }
+    },
+    {
+      "name": "luxass/prettier-config",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/prettier-config",
+      "pushedAt": "2023-01-08T19:12:33Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#f1e05a",
+        "name": "JavaScript"
       }
     },
     {
@@ -38,18 +50,6 @@
       "language": {
         "color": "#f1e05a",
         "name": "JavaScript"
-      }
-    },
-    {
-      "name": "luxass/load-config",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/load-config",
-      "pushedAt": "2022-12-31T14:54:35Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
       }
     },
     {
