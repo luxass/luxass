@@ -1,9 +1,33 @@
 {
-  "lastUpdated": "2023-01-13T01:50:51.401Z",
+  "lastUpdated": "2023-01-14T01:45:35.004Z",
   "totalCount": 54,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/eslint-config",
+      "description": "My shareable ESLint config",
+      "url": "https://github.com/luxass/eslint-config",
+      "pushedAt": "2023-01-13T20:19:39Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#f1e05a",
+        "name": "JavaScript"
+      }
+    },
+    {
+      "name": "luxass/prettier-config",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/prettier-config",
+      "pushedAt": "2023-01-13T20:12:57Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#f1e05a",
+        "name": "JavaScript"
+      }
+    },
     {
       "name": "luxass/luxass.dev",
       "description": "No description was set",
@@ -38,30 +62,6 @@
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/prettier-config",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/prettier-config",
-      "pushedAt": "2023-01-08T19:12:33Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#f1e05a",
-        "name": "JavaScript"
-      }
-    },
-    {
-      "name": "luxass/eslint-config",
-      "description": "My shareable ESLint config",
-      "url": "https://github.com/luxass/eslint-config",
-      "pushedAt": "2023-01-04T19:52:55Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#f1e05a",
-        "name": "JavaScript"
       }
     },
     {
