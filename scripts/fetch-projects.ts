@@ -4,72 +4,72 @@ import fs from "node:fs/promises";
 import toEmoji from "emoji-name-map";
 
 export interface Projects {
-  lastUpdated: string
-  totalCount: number
-  totalStars: number
-  totalForks: number
+  lastUpdated: string;
+  totalCount: number;
+  totalStars: number;
+  totalForks: number;
   projects: {
-    name: string
-    description: string
-    url: string
-    pushedAt: string
-    stars: number
-    forks: number
-    language: LanguageNode
-  }[]
+    name: string;
+    description: string;
+    url: string;
+    pushedAt: string;
+    stars: number;
+    forks: number;
+    language: LanguageNode;
+  }[];
 }
 
 export interface Profile {
-  user: User
+  user: User;
 }
 
 export interface User {
-  pinnedItems: PinnedItems
-  repositories: Repositories
+  pinnedItems: PinnedItems;
+  repositories: Repositories;
 }
 
 export interface PinnedItems {
-  edges: Edge[]
+  edges: Edge[];
 }
 
 export interface Edge {
-  node: EdgeNode
+  node: EdgeNode;
 }
 
 export interface EdgeNode {
-  nameWithOwner: string
-  description: string | null
-  pushedAt: string
-  stargazerCount: number
-  forkCount: number
-  url: string
-  languages: Languages
-  object: Object | null
+  nameWithOwner: string;
+  description: string | null;
+  pushedAt: string;
+  stargazerCount: number;
+  forkCount: number;
+  url: string;
+  languages: Languages;
+  object: Object | null;
 }
 
 export interface Languages {
-  nodes: LanguageNode[]
+  nodes: LanguageNode[];
 }
 
 export interface LanguageNode {
-  color: string
-  name: string
+  color: string;
+  name: string;
 }
 
 export interface Object {
-  entries: Entry[]
+  entries: Entry[];
 }
 
 export interface Entry {
-  name: string
-  type: EntryType
+  name: string;
+  type: EntryType;
 }
 
 export type EntryType = "blob" | "tree";
 
 export interface Repositories {
-  totalCount: number
-  nodes: EdgeNode[]
+  totalCount: number;
+  nodes: EdgeNode[];
 }
 
 function parseEmojis(desc: string): string {
@@ -154,30 +154,47 @@ async function getProfile(username: string): Promise<{ data: Profile }> {
 
 async function writeProjectFile(projects: Projects) {
   console.log("writing project file");
-  await fs.writeFile("./assets/projects.json", JSON.stringify(projects, null, 2));
+  await fs.writeFile(
+    "./assets/projects.json",
+    JSON.stringify(projects, null, 2)
+  );
 }
 
-const includeNames = [".luxass", ".luxassinclude", ".luxass_include", ".luxass-visdig", ".luxass-include", ".luxass-komfritfrem"];
+const includeNames = [
+  ".luxass",
+  ".luxassinclude",
+  ".luxass_include",
+  ".luxass-visdig",
+  ".luxass-include",
+  ".luxass-komfritfrem"
+];
 
 async function run() {
   const { data: profile } = await getProfile("luxass");
 
-  if (!profile)
-    throw new TypeError("An error occurred.");
+  if (!profile) throw new TypeError("An error occurred.");
 
-  const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map(edge => edge.node);
+  const pinnedItemsEdgeNodes = profile.user.pinnedItems.edges.map(
+    (edge) => edge.node
+  );
   console.log(pinnedItemsEdgeNodes);
 
-  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter(node =>
-    node.object?.entries.find(entry => includeNames.includes(entry.name))
+  const repositoriesEdgeNodes = profile.user.repositories.nodes.filter((node) =>
+    node.object?.entries.find((entry) => includeNames.includes(entry.name))
   );
 
-  const all = repositoriesEdgeNodes.concat(pinnedItemsEdgeNodes).reduce<EdgeNode[]>((prev, curr) => {
-    if (!prev.find(node => node.nameWithOwner === curr.nameWithOwner))
-      prev.push(curr);
+  const all = repositoriesEdgeNodes
+    .concat(pinnedItemsEdgeNodes)
+    .reduce<EdgeNode[]>((prev, curr) => {
+      if (!prev.find((node) => node.nameWithOwner === curr.nameWithOwner)) {
+        prev.push(curr);
+      }
 
-    return prev;
-  }, []).sort((a, b) => new Date(b.pushedAt).getTime() - new Date(a.pushedAt).getTime());
+      return prev;
+    }, [])
+    .sort(
+      (a, b) => new Date(b.pushedAt).getTime() - new Date(a.pushedAt).getTime()
+    );
 
   const totalStars = all.reduce((acc, curr) => acc + curr.stargazerCount, 0);
   const totalForks = all.reduce((acc, curr) => acc + curr.forkCount, 0);
@@ -189,7 +206,9 @@ async function run() {
     projects: all.map((project) => {
       return {
         name: project.nameWithOwner,
-        description: parseEmojis(project.description || "No description was set"),
+        description: parseEmojis(
+          project.description || "No description was set"
+        ),
         url: project.url,
         pushedAt: project.pushedAt,
         stars: project.stargazerCount,
