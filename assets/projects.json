@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2023-01-17T01:48:15.307Z",
+  "lastUpdated": "2023-01-18T01:50:20.338Z",
   "totalCount": 53,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/tsconf-utils",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/tsconf-utils",
+      "pushedAt": "2023-01-17T16:21:52Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "luxass/luxass.dev",
       "description": "No description was set",
@@ -50,18 +62,6 @@
       "language": {
         "color": "#f1e05a",
         "name": "JavaScript"
-      }
-    },
-    {
-      "name": "luxass/tsconf-utils",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/tsconf-utils",
-      "pushedAt": "2023-01-08T19:22:40Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
       }
     },
     {
