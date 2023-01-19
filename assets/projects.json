@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2023-01-18T01:50:20.338Z",
-  "totalCount": 53,
+  "lastUpdated": "2023-01-19T01:50:18.780Z",
+  "totalCount": 54,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/elysius",
+      "description": "Find a file or directory by traversing",
+      "url": "https://github.com/luxass/elysius",
+      "pushedAt": "2023-01-18T21:53:25Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "luxass/tsconf-utils",
       "description": "No description was set",
