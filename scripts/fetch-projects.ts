@@ -1,5 +1,3 @@
-import fs from "node:fs/promises";
-
 // @ts-expect-error This doesn't have types......
 import toEmoji from "emoji-name-map";
 
@@ -154,10 +152,7 @@ async function getProfile(username: string): Promise<{ data: Profile }> {
 
 async function writeProjectFile(projects: Projects) {
   console.log("writing project file");
-  await fs.writeFile(
-    "./assets/projects.json",
-    JSON.stringify(projects, null, 2)
-  );
+  await Bun.write("./assets/projects.json", JSON.stringify(projects, null, 2));
 }
 
 const includeNames = [
