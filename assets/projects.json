@@ -1,9 +1,21 @@
 {
-  "lastUpdated": "2023-01-21T01:47:18.957Z",
-  "totalCount": 54,
+  "lastUpdated": "2023-01-21T11:40:12.913Z",
+  "totalCount": 55,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/load-config",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/load-config",
+      "pushedAt": "2023-01-20T17:30:15Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "luxass/elysius",
       "description": "Find a file or directory by traversing",
