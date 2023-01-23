@@ -1,14 +1,50 @@
 {
-  "lastUpdated": "2023-01-22T01:49:53.472Z",
+  "lastUpdated": "2023-01-23T01:47:56.677Z",
   "totalCount": 55,
-  "totalStars": 0,
+  "totalStars": 1,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass/luxass.dev",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/luxass.dev",
+      "pushedAt": "2023-01-22T18:40:38Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
+    {
+      "name": "luxass/typeschema",
+      "description": "Generate JSON Schemas, Zod Schemas from TypeScript types.",
+      "url": "https://github.com/luxass/typeschema",
+      "pushedAt": "2023-01-22T11:39:21Z",
+      "stars": 1,
+      "forks": 0,
+      "language": {
+        "color": "#ff5a03",
+        "name": "Astro"
+      }
+    },
     {
       "name": "luxass/load-config",
       "description": "No description was set",
       "url": "https://github.com/luxass/load-config",
-      "pushedAt": "2023-01-21T12:14:08Z",
+      "pushedAt": "2023-01-22T11:31:19Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
+    {
+      "name": "luxass/tsconf-utils",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/tsconf-utils",
+      "pushedAt": "2023-01-22T11:17:26Z",
       "stars": 0,
       "forks": 0,
       "language": {
@@ -21,30 +57,6 @@
       "description": "Find a file or directory by traversing",
       "url": "https://github.com/luxass/elysius",
       "pushedAt": "2023-01-18T21:53:25Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/tsconf-utils",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/tsconf-utils",
-      "pushedAt": "2023-01-17T16:21:52Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/luxass.dev",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2023-01-15T23:15:43Z",
       "stars": 0,
       "forks": 0,
       "language": {
@@ -141,30 +153,6 @@
       "description": "No description was set",
       "url": "https://github.com/luxass/theme-studio",
       "pushedAt": "2022-04-03T20:54:41Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/github-stats",
-      "description": "✨ Dynamically generated github statistics for your readmes",
-      "url": "https://github.com/luxass/github-stats",
-      "pushedAt": "2021-09-22T13:48:05Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass/live-server-qr",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/live-server-qr",
-      "pushedAt": "2021-03-18T13:42:28Z",
       "stars": 0,
       "forks": 0,
       "language": {
