@@ -1,7 +1,7 @@
 // @ts-expect-error This doesn't have types......
 import toEmoji from "emoji-name-map";
-import type { Profile, Projects, EdgeNode } from "./types";
 
+import type { EdgeNode, Profile, Projects } from "./types";
 
 function parseEmojis(desc: string): string {
   return desc.replace(/:\w+:/gm, (match) => {
@@ -15,7 +15,10 @@ const query = `query Profile($name: String!) {
       edges {
         node {
           ... on Repository {
-            nameWithOwner
+            name
+            owner {
+              login
+            }
             description
             pushedAt
             stargazerCount
@@ -42,7 +45,10 @@ const query = `query Profile($name: String!) {
     repositories(first: 100, orderBy: { direction: ASC, field: PUSHED_AT }, privacy: PUBLIC) {
       totalCount
       nodes {
-        nameWithOwner
+        name
+        owner {
+          login
+        }
         description
         pushedAt
         stargazerCount
@@ -114,7 +120,7 @@ async function run() {
   const all = repositoriesEdgeNodes
     .concat(pinnedItemsEdgeNodes)
     .reduce<EdgeNode[]>((prev, curr) => {
-      if (!prev.find((node) => node.nameWithOwner === curr.nameWithOwner)) {
+      if (!prev.find((node) => node.name === curr.name && node.owner.login === curr.owner.login)) {
         prev.push(curr);
       }
 
@@ -133,7 +139,8 @@ async function run() {
     totalForks,
     projects: all.map((project) => {
       return {
-        name: project.nameWithOwner,
+        name: project.name,
+        owner: project.owner.login,
         description: parseEmojis(
           project.description || "No description was set"
         ),

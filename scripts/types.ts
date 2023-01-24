@@ -6,6 +6,7 @@ export interface Projects {
   totalForks: number;
   projects: {
     name: string;
+    owner: string;
     description: string;
     url: string;
     pushedAt: string;
@@ -33,7 +34,10 @@ export interface Edge {
 }
 
 export interface EdgeNode {
-  nameWithOwner: string;
+  name: string;
+  owner: {
+    login: string;
+  };
   description: string | null;
   pushedAt: string;
   stargazerCount: number;
