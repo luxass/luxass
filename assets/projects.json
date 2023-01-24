@@ -1,11 +1,12 @@
 {
-  "lastUpdated": "2023-01-24T01:48:18.477Z",
+  "lastUpdated": "2023-01-24T13:11:55.490Z",
   "totalCount": 55,
   "totalStars": 1,
   "totalForks": 0,
   "projects": [
     {
-      "name": "luxass/luxass.dev",
+      "name": "luxass.dev",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/luxass.dev",
       "pushedAt": "2023-01-22T18:40:38Z",
@@ -17,7 +18,8 @@
       }
     },
     {
-      "name": "luxass/typeschema",
+      "name": "typeschema",
+      "owner": "luxass",
       "description": "Generate JSON Schemas, Zod Schemas from TypeScript types.",
       "url": "https://github.com/luxass/typeschema",
       "pushedAt": "2023-01-22T11:39:21Z",
@@ -29,7 +31,8 @@
       }
     },
     {
-      "name": "luxass/load-config",
+      "name": "load-config",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/load-config",
       "pushedAt": "2023-01-22T11:31:19Z",
@@ -41,7 +44,8 @@
       }
     },
     {
-      "name": "luxass/tsconf-utils",
+      "name": "tsconf-utils",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/tsconf-utils",
       "pushedAt": "2023-01-22T11:17:26Z",
@@ -53,7 +57,8 @@
       }
     },
     {
-      "name": "luxass/elysius",
+      "name": "elysius",
+      "owner": "luxass",
       "description": "Find a file or directory by traversing",
       "url": "https://github.com/luxass/elysius",
       "pushedAt": "2023-01-18T21:53:25Z",
@@ -65,7 +70,8 @@
       }
     },
     {
-      "name": "zotera/zotera",
+      "name": "zotera",
+      "owner": "zotera",
       "description": "A open-source registry for VSIX extensions",
       "url": "https://github.com/zotera/zotera",
       "pushedAt": "2023-01-14T10:16:57Z",
@@ -77,7 +83,8 @@
       }
     },
     {
-      "name": "luxass/eslint-config",
+      "name": "eslint-config",
+      "owner": "luxass",
       "description": "My shareable ESLint config",
       "url": "https://github.com/luxass/eslint-config",
       "pushedAt": "2023-01-13T20:19:39Z",
@@ -89,7 +96,8 @@
       }
     },
     {
-      "name": "luxass/prettier-config",
+      "name": "prettier-config",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/prettier-config",
       "pushedAt": "2023-01-13T20:12:57Z",
@@ -101,7 +109,8 @@
       }
     },
     {
-      "name": "luxass/jsonc-parse",
+      "name": "jsonc-parse",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/jsonc-parse",
       "pushedAt": "2022-12-26T13:41:20Z",
@@ -113,7 +122,8 @@
       }
     },
     {
-      "name": "luxass/action-trending",
+      "name": "action-trending",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/action-trending",
       "pushedAt": "2022-12-18T19:26:35Z",
@@ -125,7 +135,8 @@
       }
     },
     {
-      "name": "luxass/luxals",
+      "name": "luxals",
+      "owner": "luxass",
       "description": "⭐ A collection of JavaScript & TypeScript utilities.",
       "url": "https://github.com/luxass/luxals",
       "pushedAt": "2022-09-22T20:08:06Z",
@@ -137,7 +148,8 @@
       }
     },
     {
-      "name": "luxass/neoman",
+      "name": "neoman",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/neoman",
       "pushedAt": "2022-09-04T18:15:35Z",
@@ -149,7 +161,8 @@
       }
     },
     {
-      "name": "luxass/theme-studio",
+      "name": "theme-studio",
+      "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/theme-studio",
       "pushedAt": "2022-04-03T20:54:41Z",
