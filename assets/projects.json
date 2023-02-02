@@ -1,9 +1,35 @@
 {
-  "lastUpdated": "2023-02-01T01:51:20.805Z",
-  "totalCount": 57,
+  "lastUpdated": "2023-02-02T01:49:56.255Z",
+  "totalCount": 58,
   "totalStars": 0,
   "totalForks": 1,
   "projects": [
+    {
+      "name": "luxass.dev",
+      "owner": "luxass",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/luxass.dev",
+      "pushedAt": "2023-02-01T06:56:27Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#ff5a03",
+        "name": "Astro"
+      }
+    },
+    {
+      "name": "elysius",
+      "owner": "luxass",
+      "description": "Find a file or directory by traversing",
+      "url": "https://github.com/luxass/elysius",
+      "pushedAt": "2023-02-01T06:47:38Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
     {
       "name": "tsconf-utils",
       "owner": "luxass",
@@ -15,19 +41,6 @@
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass.dev",
-      "owner": "luxass",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2023-01-31T01:56:55Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#ff5a03",
-        "name": "Astro"
       }
     },
     {
@@ -71,19 +84,6 @@
       "description": "No description was set",
       "url": "https://github.com/luxass/load-config",
       "pushedAt": "2023-01-22T11:31:19Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "elysius",
-      "owner": "luxass",
-      "description": "Find a file or directory by traversing",
-      "url": "https://github.com/luxass/elysius",
-      "pushedAt": "2023-01-18T21:53:25Z",
       "stars": 0,
       "forks": 0,
       "language": {
