@@ -1,15 +1,28 @@
 {
-  "lastUpdated": "2023-02-07T01:48:27.241Z",
+  "lastUpdated": "2023-02-08T01:50:16.181Z",
   "totalCount": 58,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
     {
+      "name": "import-cost",
+      "owner": "luxass",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/import-cost",
+      "pushedAt": "2023-02-07T21:30:05Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
+    {
       "name": "luxass.dev",
       "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2023-02-06T19:57:50Z",
+      "pushedAt": "2023-02-07T11:06:43Z",
       "stars": 0,
       "forks": 0,
       "language": {
@@ -149,32 +162,6 @@
       "description": "No description was set",
       "url": "https://github.com/luxass/action-trending",
       "pushedAt": "2022-12-18T19:26:35Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxals",
-      "owner": "luxass",
-      "description": "⭐ A collection of JavaScript & TypeScript utilities.",
-      "url": "https://github.com/luxass/luxals",
-      "pushedAt": "2022-09-22T20:08:06Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "theme-studio",
-      "owner": "luxass",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/theme-studio",
-      "pushedAt": "2022-04-03T20:54:41Z",
       "stars": 0,
       "forks": 0,
       "language": {
