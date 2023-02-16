@@ -1,9 +1,22 @@
 {
-  "lastUpdated": "2023-02-15T01:51:36.499Z",
-  "totalCount": 58,
+  "lastUpdated": "2023-02-16T01:50:16.295Z",
+  "totalCount": 59,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
+    {
+      "name": "luxass.dev",
+      "owner": "luxass",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/luxass.dev",
+      "pushedAt": "2023-02-15T01:57:57Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#ff5a03",
+        "name": "Astro"
+      }
+    },
     {
       "name": "import-cost",
       "owner": "luxass",
@@ -15,19 +28,6 @@
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass.dev",
-      "owner": "luxass",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2023-02-14T01:57:52Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#ff5a03",
-        "name": "Astro"
       }
     },
     {
