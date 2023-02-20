@@ -12,6 +12,6 @@
     "types": ["bun-types"],
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["./scripts/**/*.ts"],
+  "include": ["*.ts"],
   "exclude": ["node_modules"]
 }

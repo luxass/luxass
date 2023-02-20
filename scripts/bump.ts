@@ -1,0 +1,3 @@
+// THIS SCRIPT IS WRITTEN FOR DENO, UNTIL BUN SUPPORTS RUNNING HTTPS FILES
+
+console.log("Bumping version number...");
