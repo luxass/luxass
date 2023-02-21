@@ -6,8 +6,8 @@ import {
   Confirm,
   Input,
   Select,
-  prompt,
-  type SelectValueOptions
+  type SelectValueOptions,
+  prompt
 } from "https://deno.land/x/cliffy@v0.25.7/prompt/mod.ts";
 import { globber } from "https://deno.land/x/globber@0.1.0/mod.ts";
 
@@ -62,31 +62,6 @@ async function pickVersion(version: string) {
   }
 
   return result;
-}
-
-async function getVersion(fileName: string) {
-  let version: string;
-
-  try {
-    version = JSON.parse(await Deno.readTextFile(fileName)).version;
-    if (!version) {
-      return;
-    }
-  } catch (err) {
-    if (err instanceof Deno.errors.PermissionDenied) {
-      throw err;
-    } else {
-      throw new TypeError(`Could not read ${fileName} file.`);
-    }
-  }
-
-  if (!valid(version)) {
-    throw new TypeError(
-      `${fileName} file contained version "${version}", which is not a valid version string`
-    );
-  }
-
-  return version;
 }
 
 await new Command()
