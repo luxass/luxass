@@ -1,15 +1,28 @@
 {
-  "lastUpdated": "2023-02-21T01:50:44.866Z",
+  "lastUpdated": "2023-02-22T01:49:51.069Z",
   "totalCount": 59,
   "totalStars": 0,
   "totalForks": 0,
   "projects": [
     {
+      "name": "eslint-config",
+      "owner": "luxass",
+      "description": "My shareable ESLint config",
+      "url": "https://github.com/luxass/eslint-config",
+      "pushedAt": "2023-02-21T17:42:35Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#f1e05a",
+        "name": "JavaScript"
+      }
+    },
+    {
       "name": "luxass.dev",
       "owner": "luxass",
       "description": "No description was set",
       "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2023-02-20T21:43:42Z",
+      "pushedAt": "2023-02-21T01:57:34Z",
       "stars": 0,
       "forks": 0,
       "language": {
@@ -128,19 +141,6 @@
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
-      }
-    },
-    {
-      "name": "eslint-config",
-      "owner": "luxass",
-      "description": "My shareable ESLint config",
-      "url": "https://github.com/luxass/eslint-config",
-      "pushedAt": "2023-01-13T20:19:39Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#f1e05a",
-        "name": "JavaScript"
       }
     },
     {
