@@ -6,8 +6,8 @@ import {
   Confirm,
   Input,
   Select,
-  type SelectValueOptions,
-  prompt
+  prompt,
+  type SelectValueOptions
 } from "https://deno.land/x/cliffy@v0.25.7/prompt/mod.ts";
 import { globber } from "https://deno.land/x/globber@0.1.0/mod.ts";
 
@@ -65,11 +65,12 @@ async function pickVersion(version: string) {
 }
 
 await new Command()
-  .arguments("<dirs...:string>")
+  .arguments("[dirs...:string]")
   .option("--cwd <cwd:string>", "Print the current working directory", {
     default: Deno.cwd()
   })
   .action(async ({ cwd }, ...dirs: [string, ...Array<string>]) => {
+    if (!dirs.length) dirs = ["package.json"];
     const iterator = globber({
       extensions: [".json", ".jsonc", ".json5"],
       cwd,
@@ -92,7 +93,10 @@ await new Command()
       const pkgJSON = JSON.parse(content);
       const { version } = pkgJSON;
 
-      if (!version) continue;
+      if (!version) {
+        console.log(`Skipping ${file} because it doesn't have a version`);
+        continue;
+      }
       if (!valid(version)) {
         throw new TypeError(
           `${file} file contained version "${version}", which is not a valid version string`
