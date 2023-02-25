@@ -100,7 +100,7 @@ await new Command()
       }
       const newVersion = pickedVersion || (await pickVersion(version)).version;
 
-      if (!firstRun) {
+      if (!firstRun && files.length > 1) {
         const result = await Confirm.prompt(
           "Do you want to use the same version, for all packages?"
         );
