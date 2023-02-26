@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2023-02-25T01:50:33.556Z",
+  "lastUpdated": "2023-02-26T01:51:16.219Z",
   "totalCount": 59,
   "totalStars": 0,
   "totalForks": 0,
@@ -9,7 +9,33 @@
       "owner": "luxass",
       "description": "Generate JSON Schemas, Zod Schemas from TypeScript types.",
       "url": "https://github.com/luxass/typeschema",
-      "pushedAt": "2023-02-24T11:37:09Z",
+      "pushedAt": "2023-02-25T14:10:53Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#ff5a03",
+        "name": "Astro"
+      }
+    },
+    {
+      "name": "neoman",
+      "owner": "luxass",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/neoman",
+      "pushedAt": "2023-02-25T13:50:17Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
+    {
+      "name": "luxass.dev",
+      "owner": "luxass",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/luxass.dev",
+      "pushedAt": "2023-02-25T01:56:42Z",
       "stars": 0,
       "forks": 0,
       "language": {
@@ -28,32 +54,6 @@
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
-      }
-    },
-    {
-      "name": "neoman",
-      "owner": "luxass",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/neoman",
-      "pushedAt": "2023-02-24T11:35:22Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#3178c6",
-        "name": "TypeScript"
-      }
-    },
-    {
-      "name": "luxass.dev",
-      "owner": "luxass",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2023-02-24T01:55:42Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#ff5a03",
-        "name": "Astro"
       }
     },
     {
