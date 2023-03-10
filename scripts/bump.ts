@@ -1,4 +1,4 @@
-// THIS SCRIPT IS WRITTEN FOR DENO, UNTIL BUN SUPPORTS RUNNING HTTPS FILES
+// THIS SCRIPT IS WRITTEN FOR DENO, AND WILL BE REWRITTEN WITH BUN WHEN SUPPORT FOR RUNNING FILES WITH HTTP(S) IS ADDED
 
 import { increment, valid } from "https://deno.land/std@0.177.0/semver/mod.ts";
 import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
@@ -74,6 +74,7 @@ await new Command()
     const iterator = globber({
       extensions: [".json", ".jsonc", ".json5"],
       cwd,
+      exclude: ["**/node_modules/**"],
       include: dirs
     });
 
