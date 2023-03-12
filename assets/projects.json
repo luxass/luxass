@@ -1,20 +1,46 @@
 {
-  "lastUpdated": "2023-03-11T01:45:17.219Z",
+  "lastUpdated": "2023-03-12T01:50:46.214Z",
   "totalCount": 60,
   "totalStars": 1,
   "totalForks": 0,
   "projects": [
     {
-      "name": "import-cost",
+      "name": "typeschema",
       "owner": "luxass",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/import-cost",
-      "pushedAt": "2023-03-10T12:04:38Z",
+      "description": "Generate JSON Schemas, Zod Schemas from TypeScript types.",
+      "url": "https://github.com/luxass/typeschema",
+      "pushedAt": "2023-03-11T21:59:15Z",
       "stars": 0,
       "forks": 0,
       "language": {
         "color": "#3178c6",
         "name": "TypeScript"
+      }
+    },
+    {
+      "name": "import-cost",
+      "owner": "luxass",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/import-cost",
+      "pushedAt": "2023-03-11T06:47:26Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#3178c6",
+        "name": "TypeScript"
+      }
+    },
+    {
+      "name": "luxass.dev",
+      "owner": "luxass",
+      "description": "No description was set",
+      "url": "https://github.com/luxass/luxass.dev",
+      "pushedAt": "2023-03-11T01:50:20Z",
+      "stars": 0,
+      "forks": 0,
+      "language": {
+        "color": "#ff5a03",
+        "name": "Astro"
       }
     },
     {
@@ -28,32 +54,6 @@
       "language": {
         "color": "#f1e05a",
         "name": "JavaScript"
-      }
-    },
-    {
-      "name": "luxass.dev",
-      "owner": "luxass",
-      "description": "No description was set",
-      "url": "https://github.com/luxass/luxass.dev",
-      "pushedAt": "2023-03-10T01:59:49Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#ff5a03",
-        "name": "Astro"
-      }
-    },
-    {
-      "name": "typeschema",
-      "owner": "luxass",
-      "description": "Generate JSON Schemas, Zod Schemas from TypeScript types.",
-      "url": "https://github.com/luxass/typeschema",
-      "pushedAt": "2023-02-25T14:10:53Z",
-      "stars": 0,
-      "forks": 0,
-      "language": {
-        "color": "#ff5a03",
-        "name": "Astro"
       }
     },
     {
