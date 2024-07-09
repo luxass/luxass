@@ -1,3 +1,3 @@
-# ProjectRC
+# mosaic
 
-This is where i store my external [`projecrc`](https://projectrc.luxass.dev) files.
+This is where i store my external [`mosaic`](https://mosaic.luxass.dev) files.
